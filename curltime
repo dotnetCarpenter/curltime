@@ -25,8 +25,8 @@ for available variables.
 
 Parameters:
 
-	-h, --help\t display this help and exit
-	-u, --url\t write raw URL directly to cURL
+	-h, --help	display this help and exit
+	-u, --url	write raw URL directly to cURL
 EOF
 }
 
