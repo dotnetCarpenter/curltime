@@ -42,3 +42,9 @@ echo "\nexport PATH="$PWD:\$PATH"" >> ~/.zprofile
 ```
 
 > _Personally, I always you the profile file for my custom stuff._
+
+
+## CC BY-SA 4.0 License
+
+[Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+same as https://stackoverflow.com/legal/terms-of-service/public#licensing.
