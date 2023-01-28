@@ -6,7 +6,7 @@
 # List of Bash operands
 # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
 
-VERSION="0.1.0"
+VERSION="0.2.0"
 CURRENT_DIR="$(dirname -- "$0")"
 
 function help {
@@ -54,4 +54,11 @@ if [[ -z $url ]]; then
 fi
 
 echo "Stats for $url"
-curl --write-out "@$CURRENT_DIR/curl-format.txt" --output /dev/null --head  --silent "$url"
+curl --write-out "@$CURRENT_DIR/curl-format.txt" --output /dev/null --head --location --silent "$url"
+
+# cURL arguments description
+# --head		only download the HTTP Headers
+# --location	follow redirects
+# --output		where to place the server response
+# --silent		do not output progress bar
+# --write-out	output formatting file

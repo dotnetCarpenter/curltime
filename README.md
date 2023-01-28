@@ -7,7 +7,7 @@
 ```
 Usage: ./curltime [--url http://subdomain.example.com | example.com]
 
-curltime version 0.1.0
+curltime version 0.2.0
 
 If --url is not used, the last argument will be prefixed with "https://"
 and postfixed with "/".
