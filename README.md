@@ -47,4 +47,5 @@ echo "\nexport PATH="$PWD:\$PATH"" >> ~/.zprofile
 ## CC BY-SA 4.0 License
 
 [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
-same as https://stackoverflow.com/legal/terms-of-service/public#licensing.
+
+Which is the same license used by [stackoverflow.com](https://stackoverflow.com/legal/terms-of-service/public#licensing).
