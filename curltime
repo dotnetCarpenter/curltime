@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+
+# If we want more, and more sophisticated parameters
+# see https://stackoverflow.com/q/192249/205696
+# List of Bash operands
+# https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
+
+VERSION="0.1.0"
+CURRENT_DIR="$(dirname -- "$0")"
+
+function help {
+	cat << EOF
+Usage: $0 [--url http://subdomain.example.com | example.com]
+
+curltime version $VERSION
+
+If --url is not used, the last argument will be prefixed with "https://"
+and postfixed with "/".
+
+The output is controlled by
+$CURRENT_DIR/curl-format.txt
+See https://everything.curl.dev/usingcurl/verbose/writeout#available-write-out-variables
+for available variables.
+
+Parameters:
+
+	-h, --help\t display this help and exit
+	-u, --url\t write raw URL directly to cURL
+EOF
+}
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -u|--url)
+		url="$2"
+		shift # past argument
+		shift # past value
+		;;
+    -h|--help|-*|--*)
+		help
+		exit 1
+		;;
+    *)
+		url="https://$1/" # the last argument is a partial URL by convention
+		shift # past argument
+		;;
+  esac
+done
+
+if [[ -z $url ]]; then
+	help
+	exit 1
+fi
+
+echo "Stats for $url"
+curl --write-out "@$CURRENT_DIR/curl-format.txt" --output /dev/null --head  --silent "$url"
