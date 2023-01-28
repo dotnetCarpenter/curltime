@@ -6,7 +6,7 @@
 # List of Bash operands
 # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
 
-VERSION="0.2.0"
+VERSION="0.2.1"
 CURRENT_DIR="$(dirname -- "$0")"
 
 function help {
@@ -37,7 +37,7 @@ while [[ $# -gt 0 ]]; do
 		shift # past argument
 		shift # past value
 		;;
-    -h|--help|-*|--*)
+    -h|--help|-*)
 		help
 		exit 1
 		;;
