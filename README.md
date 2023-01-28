@@ -1,5 +1,23 @@
 # curltime
 
+## Example output
+
+```
+$ curltime example.com
+
+Stats for https://example.com/
+        http version:  2
+     time_namelookup:  0.005929s
+        time_connect:  0.164036s
+     time_appconnect:  0.442980s
+    time_pretransfer:  0.443290s
+       time_redirect:  0.000000s (0 redirects)
+  time_starttransfer:  0.564174s
+                     ----------
+          time_total:  0.564367s
+```
+
+
 ## Usage
 
 `curltime` is the codification of an excellent answer on SO: https://stackoverflow.com/a/22625150/205696
