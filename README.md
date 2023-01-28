@@ -59,7 +59,7 @@ echo "\nexport PATH="$PWD:\$PATH"" >> ~/.zsh
 echo "\nexport PATH="$PWD:\$PATH"" >> ~/.zprofile
 ```
 
-> _Personally, I always you the profile file for my custom stuff._
+> _Personally, I always use the profile file for my custom stuff._
 
 
 ## CC BY-SA 4.0 License
